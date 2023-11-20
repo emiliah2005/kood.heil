@@ -43,24 +43,23 @@
         "https://loremflickr.com/320/240",
         "https://placebeard.it/700/500",
     ];
-    let currentIndex = 0;
+    let index = 0
+    const galleryImg = document. getElementById ('gallery-img')
 
-function updateImage() {
-    document.getElementById("gallery-img").src = imageUrls[currentIndex];
-}
+    function showImage (index) {
+        galleryImg.src = imageUrls [index]
+     }
 
-function prevImage() {
-    currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
-    updateImage();
-}
+     function nextImage () {
+        index = (index + 1) % imageUrls. lenght;
+        showImage (index)
+     }
 
-function nextImage() {
-    currentIndex = (currentIndex + 1) % imageUrls.length;
-    updateImage();
-}
-
-updateImage();
-
+     function prevImage () {
+        index = (index - 1 + imageUrls.length) % imageUrls.length;
+        showImage (index);
+     }
+     showImage(index);
 
 </script>
 
