@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+    
+    <script>
+    function validateForm() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+    
+        if (username === '' || password === '') {
+            alert('Please fill in all fields');
+        } else {
+            // Jätka vormi edasi töötlemisega
+            console.log('Form submitted successfully');
+        }
+    }
+    </script>
+</body>
+</html>
