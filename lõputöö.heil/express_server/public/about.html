@@ -4,32 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RUJA Ensemble - About</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lisa stiilileht -->
+    <link rel="stylesheet" href="style.css"> 
     <style>
-        /* Lisa täiendavat stiili vajadusel */
-
-        .band-members {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+       body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1f1f1f;
+            margin: 0;
+            padding: 0;
+            color: #fff;
         }
 
-        .band-member {
-            max-width: 300px;
-            margin: 20px;
+        header {
+            background-color: #303030;
             text-align: center;
+            padding: 20px;
         }
 
-        .band-member img {
+        h1 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2f2f2f;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        img {
             max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
-        .bio {
+        h2 {
+            font-size: 32px;
+            color: #ffffff;
             margin-top: 20px;
-            font-size: 16px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
             color: #ddd;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #888;
+        }
+
+        .quote::before,
+        .quote::after {
+            content: '"';
+        }
+
+        .quote::before {
+            margin-right: 5px;
+        }
+
+        .quote::after {
+            margin-left: 5px;
+        }
+
+        .gallery img {
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -37,41 +101,46 @@
     <header>
         <h1>RUJA</h1>
         <nav>
-            <a href="index.html">Avaleht</a>
-            <a href="about.html">Meist</a>
-            <a href="music.html">Muusika</a>
-            <a href="gallery.html">Galerii</a>
+            <a href="/">Avaleht</a>
+            <a href="/contact">Kontakt</a>
         </nav>
     </header>
 
-    <div class="container" id="Meist">
-        <h2>Meist</h2>
-        <p>Tutvuge RUJA bändi liikmetega ja saage teada rohkem nende ainulaadse muusika ja panuse kohta Eesti muusikasse.</p>
+    <div class="container" id="Ansambli liikmed">
+        <h2>Ansabli liikmed</h2>
 
-        <div class="band-members">
-            <div class="band-member">
-                <img src="https://i.imgur.com/member1.jpg" alt="Bändi liige 1">
-                <h3>Liige 1</h3>
-                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <div class="Ansambli liikmed">
+            <div class="Vokaal">
+                <img src="data:image/jpeg;base64,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" alt="ansambli liige 1">
+                <h3>Vokaal - Urmas Alender</h3>
+                <p class="bio">Urmas Alenderi laulustiilile oli iseloomulik sügav ja hingestatud esitus. Tema panus Eesti muusikamaastikule seisneb ansambli Ruja hittides.</p>
             </div>
 
-            <div class="band-member">
-                <img src="https://i.imgur.com/member2.jpg" alt="Bändi liige 2">
-                <h3>Liige 2</h3>
-                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="Ansambli liikmed">
+                <img src="https://s.err.ee/photo/crop/2017/08/20/397673hbbdct6.jpg" alt="ansambli liige 2">
+                <h3>Kitarr - Jaanus Nõgisto</h3>
+                <p class="bio"> Nõgisto oli tuntud oma oskuste poolest mitmete kitarristlike stiilide valdamisel ning tema mängust õhkus loomingulisust ja innovatiivsust. Lisaks aktiivsele rollile Ruja asutajana ja liikmena oli ta ka ansambli helilooja, andes olulise panuse bändi laiendamisse erinevatesse muusikastiilidesse.</p>
             </div>
 
-            <div class="band-member">
-                <img src="https://i.imgur.com/member3.jpg" alt="Bändi liige 3">
-                <h3>Liige 3</h3>
-                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="Ansambli liikmed">
+                <img src="https://i.err.ee/smartcrop?type=optimize&width=1472&aspectratio=16%3A10&url=https%3A%2F%2Fs.err.ee%2Fphoto%2Fcrop%2F2021%2F05%2F28%2F1022850h121c.jpg" alt="ansambli liige 3">
+                <h3>Basskitarr - Tiit Haagma</h3>
+                <p class="bio">Tiit Haagma tegutses ansamblis RUJA aastatel 1972-1986 basskitarristina. Lisaks muusikale tegelas ta veel purjetamisega.</p>
             </div>
 
-            <div class="band-member">
-                <img src="https://i.imgur.com/member4.jpg" alt="Bändi liige 4">
-                <h3>Liige 4</h3>
-                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="Ansambli liikmed">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtemr2pgLbm3JVdazqELsKa1b9iRBB7JY-mw&usqp=CAU" alt="ansambli liige 4">
+                <h3>Klahvpillid - Rein Rannap</h3>
+                <p class="bio">Rannap on tuntud oma mitmekesise panuse poolest Eesti muusikasse, eriti aga ansambli Ruja liikmena, kus ta mängis klahvpille ja oli üks olulistest laulukirjutajatest. Tema koostöö Urmas Alenderiga tõi kaasa mitmeid ansambli suurimaid hitte. (Pildil vasakul)</p>
             </div>
+        </div>
+        <div class="Ansambli liikmed">
+            <img src="data:image/jpeg;base64,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" alt="ansambli liige 3">
+            <h3>Trummid - Jaan Karp</h3>
+            <p class="bio">Karp oli Ruja bändi teine trummar, asudes ametisse 1977. aastal, pärast eelnevalt trummi mänginud Riho Leppoja lahkumist ansamblist.
+
+        Jaan Karpiga seoses on teada, et ta oli osa Ruja koosseisust, mis tegutses aktiivselt 1970. aastatest kuni ansambli laialiminekuni 1988. aastal. Ruja oli üks Eesti kultuuri ja muusikaelu mõjukamaid rockbände, kelle muusika hõlmas mitmesuguseid stiile alates progerockist kuni popini. (Pildil teine rida keskmine)</p>
         </div>
     </div>
 </body>
